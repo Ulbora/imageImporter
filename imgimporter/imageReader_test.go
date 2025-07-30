@@ -1,4 +1,4 @@
-package imageimporter
+package imgimporter
 
 import "testing"
 

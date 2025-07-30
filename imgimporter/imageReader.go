@@ -1,4 +1,4 @@
-package imageimporter
+package imgimporter
 
 import (
 	"fmt"
@@ -12,10 +12,6 @@ import (
 
 // RemoteImage image
 type RemoteImage struct {
-	// RemoteURL string
-	// Name      string
-	//ImageData
-	// OutputDir string
 }
 
 // ReadImage ReadImage
@@ -30,8 +26,15 @@ func (m *RemoteImage) ReadImage(name string, remoteURL string) {
 	if err != nil {
 		log.Fatalf("Error decoding image: %v", err)
 	}
+	var jpgFormat = "jpg"
+	var fformat string
+	if format == "jpeg" {
+		fformat = jpgFormat
+	} else {
+		fformat = format
+	}
 
-	outputFile, err := os.Create(name + "." + format) // Use the detected format for the extension
+	outputFile, err := os.Create(name + "." + fformat) // Use the detected format for the extension
 	if err != nil {
 		log.Fatalf("Error creating output file: %v", err)
 	}
@@ -59,4 +62,9 @@ func (m *RemoteImage) ReadImage(name string, remoteURL string) {
 
 	// You can now work with the 'img' variable, which holds the decoded image data.
 	// For example, you could save it to a local file, process it, etc.
+}
+
+// New New
+func (m *RemoteImage) New() ImageReader {
+	return m
 }
