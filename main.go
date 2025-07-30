@@ -4,12 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	ipp "github.com/Ulbora/imageImporter/imgimporter"
+	ipp "github.com/Ulbora/ImageImporter/imgimporter"
 )
-
-// ImageImporter ImageImporter
-// type ImageImporter struct {
-// }
 
 func main() {
 	//args := os.Args

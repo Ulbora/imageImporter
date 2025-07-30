@@ -58,7 +58,7 @@ func (m *RemoteImage) ReadImage(name string, remoteURL string) {
 	fmt.Printf("Image saved successfully as output_image.%s\n", format)
 
 	fmt.Printf("Image format: %s\n", format)
-	fmt.Printf("Image dimensions: %dx%d\n", img.Bounds().Dx(), img.Bounds().Dy())
+	// fmt.Printf("Image dimensions: %dx%d\n", img.Bounds().Dx(), img.Bounds().Dy())
 
 	// You can now work with the 'img' variable, which holds the decoded image data.
 	// For example, you could save it to a local file, process it, etc.
